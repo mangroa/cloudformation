@@ -1,0 +1,1 @@
+#VPC with public EC2 instance
