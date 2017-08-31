@@ -1,4 +1,12 @@
 AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+  InstanceNameParameter:
+    Type: String
+    Default: instanceName
+    Description: Enter a name for your EC2 instance.
+
+
 Resources:
   myVPC:
     Type: AWS::EC2::VPC
@@ -93,11 +101,13 @@ Resources:
         Ref: mySubnet
       Tags:
         - Key: Name
-          Value: myEC2Instance
+          Value:
+            Ref: InstanceNameParameter
 
 Outputs:
   myEC2InstanceOutputs:
     Description: The public IP of the EC2 instance
     Value: !GetAtt myEC2Instance.PublicIp
+
 
 
