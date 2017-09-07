@@ -104,21 +104,6 @@ Resources:
           Value:
             Ref: InstanceNameParameter
 
-  myEC2Instance2:
-    Type: "AWS::EC2::Instance"
-    Properties:
-      ImageId: "ami-30041c53"
-      InstanceType: t2.micro
-      KeyName: "ec2keypair"
-      SecurityGroupIds:
-        - Ref: instanceSecurityGroup
-      SubnetId:
-        Ref: mySubnet
-      Tags:
-        - Key: Name
-          Value:
-            Ref: InstanceNameParameter
-
 Outputs:
   myEC2InstanceOutputs:
     Description: The public IP of the EC2 instance
