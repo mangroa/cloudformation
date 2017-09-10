@@ -123,6 +123,9 @@ Outputs:
   myEC2InstanceOutputs:
     Description: The public IP of the EC2 instance
     Value: !GetAtt myEC2Instance.PublicIp
+  myEC2Instance2Outputs:
+    Description: The public IP of the EC2 instance
+    Value: !GetAtt myEC2Instance2.PublicIp
 
 
 
